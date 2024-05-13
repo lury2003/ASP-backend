@@ -16,7 +16,9 @@ app.use(bodyParser.json());
   const users = {};
 //   var loginModel = require('./a_loginModel');
 
-
+app.use(cors({
+  origin: 'https://dashing-trifle-0caff2.netlify.app' // Replace with your Netlify app's URL
+}));
 
 
 const employee = require('./routes/employee');
@@ -228,9 +230,9 @@ const mailOptions = {
 
 
 
-app.use(cors({
-    origin:"http://localhost:4200"
-}))
+// app.use(cors({
+//     origin:"http://localhost:4200"
+// }))
 
 
 
